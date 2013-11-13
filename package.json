@@ -8,8 +8,8 @@
     "hogan-express": "~0.5.1",
     "kue": "~0.6.2",
     "temp": "~0.6.0",
-    "tar": "~0.1.18",
-    "fstream": "~0.1.24"
+    "walk": "~2.2.1",
+    "knox": "~0.8.6",
   },
   "devDependencies": {},
   "scripts": {
