@@ -1,0 +1,30 @@
+body {
+  color: #777;
+  margin-top: 1rem;
+}
+
+h1.logo {
+  text-align: center;
+}
+
+.box {
+  height: 12rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+p.slash {
+  font-size: 2.7rem;
+}
+
+
+.boring1 { background-color: #556270; }
+.boring2 { background-color: #C44D58; }
+.fun1 { background-color: #4ECDC4; }
+.fun2 { background-color: #C7F464; }
+.fun3 { background-color: #FF6B6B; }
+
+
+
+
