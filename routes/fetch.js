@@ -8,21 +8,19 @@ var queue = kue.createQueue();
 
 module.exports = {
   post: function(req, resp){
-    var url = "https://github.com/" + req.body.organization + "/" + req.body.repository + "/archive/master.zip";
-
-    console.log(url);
-
     var job = queue.create('fetch-zip', {
-      zip: url
+      org: req.body.organization,
+      repo: req.body.repository
     });
 
+    var project = req.body.organization + "/" + req.body.repository;
     //TODO: append to activity log/sockets
     job.on('complete', function(){
-      console.log("Archive " + url + " deployed.");
+      console.log("Archive " + project + " deployed.");
     }).on('failed', function(){
-      console.log("Archive " + url + " failed.");
+      console.log("Archive " + project + " failed.");
     }).on('progress', function(progress){
-      console.log(url + ": " + progress + '% complete');
+      console.log(project + ": " + progress + '% complete');
     });
 
     job.save();
